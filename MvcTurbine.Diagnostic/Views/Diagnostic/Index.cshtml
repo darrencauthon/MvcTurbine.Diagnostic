@@ -1,0 +1,23 @@
+﻿@model Mvc.Diagnostic.ViewModels.Diagnostic.IndexViewModel
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diagnostic</title>
+	<style type="text/css">
+		body { font: 12px/120% Tahoma; }
+		.True { color: #090; }
+		.False { color: #c00; }
+	</style>
+</head>
+<body>
+	<h1>Diagnostics</h1>
+	@foreach (var diagnosticResult in Model.DiagnosticResults)
+	{
+	<p><strong class="@diagnosticResult.Passed">@diagnosticResult.Name</strong><br />
+		@diagnosticResult.Info</p>
+	}
+</body>
+</html>
