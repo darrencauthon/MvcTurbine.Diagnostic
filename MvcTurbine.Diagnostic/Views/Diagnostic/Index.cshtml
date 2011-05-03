@@ -7,17 +7,37 @@
 <head>
 	<title>Diagnostic</title>
 	<style type="text/css">
-		body { font: 12px/120% Tahoma; }
-		.True { color: #090; }
-		.False { color: #c00; }
+		body {
+			font: 12px/120% Tahoma;
+			margin: 1em;
+			padding: 0;
+		}
+		.item {
+			margin-bottom: 1em;
+			padding: 0.5em;
+		}
+		.True {
+			border-left: 15px solid #090;
+		}
+		.False {
+			border-left: 15px solid #c00;
+		}
+		.item .name {
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.item .info {
+		}
 	</style>
 </head>
 <body>
 	<h1>Diagnostics</h1>
 	@foreach (var diagnosticResult in Model.DiagnosticResults)
 	{
-	<p><strong class="@diagnosticResult.Passed">@diagnosticResult.Name</strong><br />
-		@diagnosticResult.Info</p>
+	<div class="item @diagnosticResult.Passed">
+		<div class="name">@diagnosticResult.Name</div>
+		<div class="info">@diagnosticResult.Info</div>
+	</div>
 	}
 </body>
 </html>
