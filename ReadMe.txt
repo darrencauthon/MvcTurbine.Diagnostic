@@ -8,6 +8,7 @@ USAGE
 2. Create a Diagnostics folder in your project.
 3. Create diagnostic classes the inpliment the IDiagnostic interface.
 4. Register your diagnostic classes.
+5. Goto url /Diagnostic to see the results.
 
 REQUIREMENTS
 * MVC3
