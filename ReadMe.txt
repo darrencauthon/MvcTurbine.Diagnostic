@@ -15,6 +15,9 @@ REQUIREMENTS
 * MvcTurbine
 
 NOTES
-I have only tested this with Unity. Do to the way that unity performs ResolveAll() for constructor injection, you need to make sure that your diagnostic classes are regesterd with a name. I suggest using the type name like this:
+I have only tested this with Unity. Do to the way that unity performs
+ResolveAll() for constructor injection, you need to make sure that your
+diagnostic classes are regesterd with a name. I suggest using the type
+name like this:
 
 	locator.Register<IDiagnostic, MyDiagnostic>("MyDiagnostic");
