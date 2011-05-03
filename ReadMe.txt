@@ -8,6 +8,7 @@ USAGE
 2. Create a Diagnostics folder in your project.
 3. Create diagnostic classes the inpliment the IDiagnostic interface.
 4. Register your diagnostic classes.
+5. Goto url /Diagnostic to see the results.
 
 REQUIREMENTS
 * MVC3
@@ -18,4 +19,5 @@ I have only tested this with Unity. Do to the way that unity performs
 ResolveAll() for constructor injection, you need to make sure that your
 diagnostic classes are regesterd with a name. I suggest using the type
 name like this:
+
 	locator.Register<IDiagnostic, MyDiagnostic>("MyDiagnostic");
