@@ -62,13 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DiagnosticController.cs" />
+    <Compile Include="DiagnosticBlade.cs" />
     <Compile Include="Diagnostics\ControlFailDiagnostic.cs" />
     <Compile Include="Diagnostics\ControlPassDiagnostic.cs" />
     <Compile Include="Models\DiagnosticResult.cs" />
     <Compile Include="Models\IDiagnostic.cs" />
     <Compile Include="ViewModelBuilders\Diagnostic\IndexViewModelBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration\ServiceRegistrator.cs" />
     <Compile Include="ViewModels\Diagnostic\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

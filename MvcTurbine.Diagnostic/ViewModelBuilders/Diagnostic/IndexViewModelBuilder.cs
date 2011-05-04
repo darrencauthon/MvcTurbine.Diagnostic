@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using MvcTurbine.ComponentModel;
 using MvcTurbine.Diagnostic.Models;
 using MvcTurbine.Diagnostic.ViewModels.Diagnostic;
 
@@ -12,19 +12,18 @@ namespace MvcTurbine.Diagnostic.ViewModelBuilders.Diagnostic
 
 	public class IndexViewModelBuilder : IIndexViewModelBuilder
 	{
-		private readonly IEnumerable<IDiagnostic> diagnostics;
+		private readonly IServiceLocator serviceLocator;
 
-		public IndexViewModelBuilder(IEnumerable<IDiagnostic> diagnostics)
+		public IndexViewModelBuilder(IServiceLocator serviceLocator)
 		{
-			this.diagnostics = diagnostics;
+			this.serviceLocator = serviceLocator;
 		}
 
 		public IndexViewModel Build()
 		{
-			return new IndexViewModel
-			{
-				DiagnosticResults = diagnostics.Select(diagnostic => diagnostic.Run())
-			};
+			var diagnostics = serviceLocator.ResolveServices<IDiagnostic>();
+			var results = diagnostics.Select(diagnostic => diagnostic.Run());
+			return new IndexViewModel { DiagnosticResults = results };
 		}
 	}
 }
