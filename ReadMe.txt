@@ -12,5 +12,5 @@ REQUIREMENTS
 
 USAGE
 	1. Reference the assembly.
-	2. Create classes that impliment IDiagnostic.
+	2. Create classes that implements IDiagnostic.
 	5. Goto url /Diagnostic to see the results.
