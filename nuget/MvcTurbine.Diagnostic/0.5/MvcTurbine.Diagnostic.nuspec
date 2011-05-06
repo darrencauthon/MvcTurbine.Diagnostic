@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>MvcTurbine.Diagnostic</id>
+    <version>0.5</version>
+    <authors>Jared McGuire</authors>
+    <owners>Jared McGuire</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Just implement IDiagnostic, go to /Diagnostic, and see your dashboard!</description>
+    <summary>MvcTurbine.Diagnostic is a small library that lets you easily add a diagnostics dashboard to your MVC3 Turbine application.</summary>
+    <language>en-US</language>
+  </metadata>
+</package>
