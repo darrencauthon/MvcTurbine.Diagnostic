@@ -1,9 +1,8 @@
 ﻿using MvcTurbine.Blades;
 using MvcTurbine.ComponentModel;
-using MvcTurbine.Diagnostic.Models;
-using MvcTurbine.Diagnostic.ViewModelBuilders.Diagnostic;
+using MvcTurbine.Diagnostic.Helpers;
 
-namespace MvcTurbine.Diagnostic
+namespace MvcTurbine.Diagnostic.Blades
 {
 	public class DiagnosticBlade : Blade, ISupportAutoRegistration
 	{
@@ -11,7 +10,7 @@ namespace MvcTurbine.Diagnostic
 		{
 			registrationList
 				.Add(Registration.Simple<IDiagnostic>())
-				.Add(Registration.Simple<IIndexViewModelBuilder>());
+				.Add(Registration.Simple<IDiagnosticsPageBuilder>());
 		}
 
 		public override void Spin(IRotorContext context)

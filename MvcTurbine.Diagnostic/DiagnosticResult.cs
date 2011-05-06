@@ -1,4 +1,4 @@
-﻿namespace MvcTurbine.Diagnostic.Models
+﻿namespace MvcTurbine.Diagnostic
 {
 	public class DiagnosticResult
 	{

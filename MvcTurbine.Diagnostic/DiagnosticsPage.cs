@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using MvcTurbine.Diagnostic.Models;
 
-namespace MvcTurbine.Diagnostic.ViewModels.Diagnostic
+namespace MvcTurbine.Diagnostic
 {
-	public class IndexViewModel
+	public class DiagnosticsPage
 	{
 		public IEnumerable<DiagnosticResult> DiagnosticResults { get; set; }
 	}

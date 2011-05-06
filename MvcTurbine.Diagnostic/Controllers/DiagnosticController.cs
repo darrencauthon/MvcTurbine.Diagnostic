@@ -1,20 +1,20 @@
 ﻿using System.Web.Mvc;
-using MvcTurbine.Diagnostic.ViewModelBuilders.Diagnostic;
+using MvcTurbine.Diagnostic.Helpers;
 
 namespace MvcTurbine.Diagnostic.Controllers
 {
     public class DiagnosticController : Controller
     {
-    	private readonly IIndexViewModelBuilder indexViewModelBuilder;
+    	private readonly IDiagnosticsPageBuilder diagnosticsPageBuilder;
 
-    	public DiagnosticController(IIndexViewModelBuilder indexViewModelBuilder)
+    	public DiagnosticController(IDiagnosticsPageBuilder diagnosticsPageBuilder)
 		{
-			this.indexViewModelBuilder = indexViewModelBuilder;
+			this.diagnosticsPageBuilder = diagnosticsPageBuilder;
 		}
 
     	public ActionResult Index()
     	{
-    		var model = indexViewModelBuilder.Build();
+    		var model = diagnosticsPageBuilder.Build();
 			return View("Index", model);
         }
     }
