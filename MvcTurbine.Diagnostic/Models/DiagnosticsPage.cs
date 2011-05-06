@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MvcTurbine.Diagnostic
+namespace MvcTurbine.Diagnostic.Models
 {
 	public class DiagnosticsPage
 	{

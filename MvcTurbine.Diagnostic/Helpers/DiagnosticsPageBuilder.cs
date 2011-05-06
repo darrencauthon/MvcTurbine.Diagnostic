@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using MvcTurbine.ComponentModel;
+using MvcTurbine.Diagnostic.Models;
 
 namespace MvcTurbine.Diagnostic.Helpers
 {
