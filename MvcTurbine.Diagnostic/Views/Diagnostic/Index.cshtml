@@ -32,12 +32,6 @@
 </head>
 <body>
 	<h1>Diagnostics</h1>
-	@foreach (var diagnosticResult in Model.DiagnosticResults)
-	{
-	<div class="item @diagnosticResult.Passed">
-		<div class="name">@diagnosticResult.Name</div>
-		<div class="info">@diagnosticResult.Info</div>
-	</div>
-	}
+	@Html.DisplayFor(x=>x.DiagnosticResults)
 </body>
 </html>
